@@ -14,9 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+
 from django.urls import path
+from cryptoConfigs import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # Rota, view responsável, nome de referência
+    path('', views.home, name='home'),
+    path('add_crypto/', views.add_crypto, name='add_crypto'),
+    path('cryptos/', views.cryptos, name='listagem_crypto')
+
 ]

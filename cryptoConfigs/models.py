@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Quotation(models.Model):
+class crypto(models.Model):
+    id_crypto =  models.AutoField(primary_key=True)
     crypto = models.CharField(max_length=50, unique=True)
-    price = models.FloatField()
+    valor = models.FloatField()
